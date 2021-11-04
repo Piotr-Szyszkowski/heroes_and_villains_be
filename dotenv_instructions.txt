@@ -1,0 +1,7 @@
+Set up two "env" files:
+
+.env.development
+PGDATABASE=heroes_and_villains
+
+.env.test
+PGDATABASE=heroes_and_villains_test
