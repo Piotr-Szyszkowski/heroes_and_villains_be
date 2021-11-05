@@ -1,4 +1,4 @@
-const heroes = [
+module.exports = [
   {
     name: "Punisher",
     full_name: "Frank Castle",
@@ -12,9 +12,3 @@ const heroes = [
     main_img_url: `https://i.imgur.com/lsSZ3g6.jpeg`,
   },
 ];
-
-const heroMap = heroes.map(({ name, full_name, bio, main_img_url }) => {
-  return [name, full_name, bio, main_img_url];
-});
-
-console.log(heroMap);
