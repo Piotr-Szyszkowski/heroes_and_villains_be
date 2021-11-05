@@ -27,7 +27,7 @@ describe(`GET /api`, () => {
 describe(`GET /api/characters`, () => {
   it("should respond with status 200 and an array of all character objects", () => {
     return request(app)
-      .get("api/characters")
+      .get("/api/characters")
       .expect(200)
       .then((response) => {
         expect(response.body.characters).toBeInstanceOf(Array);
