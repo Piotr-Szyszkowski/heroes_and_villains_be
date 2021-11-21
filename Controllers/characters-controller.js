@@ -1,3 +1,4 @@
+const { request, response } = require("express");
 const selectCharacters = require("../Models/characters-model");
 
 const getCharacters = (request, response) => {
@@ -6,4 +7,8 @@ const getCharacters = (request, response) => {
   });
 };
 
-module.exports = getCharacters;
+const getCharById = (request, response) => {
+  selectCharById;
+};
+
+module.exports = { getCharacters, getCharById };

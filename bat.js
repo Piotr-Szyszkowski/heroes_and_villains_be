@@ -1,11 +1,25 @@
-function rangeOfNumbers(startNum, endNum) {
-  if (startNum === endNum) {
-    return [endNum];
-  } else {
-    const rangeArr = rangeOfNumbers(startNum, endNum - 1);
-    rangeArr.push(endNum);
-    return rangeArr;
-  }
-}
+const promiseYouWillWorkCallback = (shout, cb) => {
+  setTimeout(() => {
+    if (!shout) {
+      return cb(new Error("No shout passed!!"));
+    }
+    return cb(null, shout);
+  }, 2000);
+};
 
-console.log(rangeOfNumbers(2, 4));
+const logShout = (err, shout) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(`I shout ${shout}`);
+  }
+};
+
+promiseYouWillWorkCallback(null, logShout);
+
+/**********************************/
+const promiseYouWillWorkPromise = (shout) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {}, 2000);
+  });
+};
