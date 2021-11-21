@@ -1,7 +1,8 @@
 {
   "scripts": {
     "setup-dbs": "psql -f ./DB/setup.sql",
-    "test": "jest"
+    "test": "jest",
+    "seed": "node ./DB/Seeds/run-seed.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
