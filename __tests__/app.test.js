@@ -63,7 +63,17 @@ describe(`GET /api/characters/:char_id`, () => {
       .get(`/api/characters/2`)
       .expect(200)
       .then((response) => {
-        expect(response.body).toEqual(allCharactersArray[1]);
+        expect(response.body).toEqual(
+          expect.objectContaining({
+            char_id: expect.any(Number),
+            name: expect.any(String),
+            full_name: expect.any(String),
+            bio: expect.any(String),
+            main_img_url: expect.any(String),
+          })
+        );
       });
   });
 });
+
+/* ERROR HANDLERS */
